@@ -52,3 +52,23 @@ python src/main.py
 - `main.py`: orchestration layer (application flow)
 
 Steering angle estimation and controller output are intentionally excluded at this stage to keep architecture-focused groundwork clean.
+
+## How to Play
+
+1. Open a terminal and start the hand tracking:
+
+```bash
+py src/main.py
+```
+
+2. Open a second terminal and start the game:
+
+```bash
+py game/main.py
+```
+
+3. Allow camera access if Windows asks for permission.
+
+4. Place both hands in front of the webcam.
+
+5. After the countdown, the steering wheel becomes active and controls the car.
