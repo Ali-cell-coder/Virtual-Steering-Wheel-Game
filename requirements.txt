@@ -1,0 +1,5 @@
+opencv-python>=4.10.0
+mediapipe==0.10.21
+numpy>=1.26.0
+pygame>=2.5.0
+ursina>=7.0.0
