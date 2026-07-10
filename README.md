@@ -1,74 +1,183 @@
-# Virtual Steering Wheel using Hand Tracking
+#  Virtual Steering Wheel Game
 
-Professional, modular real-time computer vision starter project for building a webcam-based virtual steering wheel controller.
+A real-time computer vision driving game that lets you control a car using a **virtual steering wheel** detected from your hands with **OpenCV** and **MediaPipe**.
 
-## Features
+The project combines hand tracking and a 2D driving game to demonstrate real-time human-computer interaction.
 
-- Python 3.12+ architecture
-- OpenCV webcam capture
-- MediaPipe hand tracking (up to 2 hands)
-- Landmark and connection rendering
-- Real-time FPS overlay
-- ESC key exit
-- Graceful camera error handling
-- Clean, extensible module boundaries for future steering logic
+---
 
-## Project Structure
+# Features
+
+-  Real-time hand tracking using MediaPipe
+-  Webcam-based virtual steering wheel
+-  2D driving game built with Pygame
+-  Traffic vehicles with random spawning
+-  Collision detection
+-  Crash sound effects
+-  Distance counter
+-  High Score system
+-  Countdown before gameplay
+-  Restart after Game Over
+-  Progressive game speed
+-  Modular project architecture
+
+---
+
+# Technologies
+
+- Python 3.12
+- OpenCV
+- MediaPipe
+- Pygame
+- NumPy
+
+---
+
+# Project Structure
 
 ```text
-OpenCvAraba/
+Virtual-Steering-Wheel-Game/
+│
+├── assets/
+│
+├── game/
+│   ├── assets/
+│   ├── data/
+│   ├── main.py
+│   ├── game_engine.py
+│   ├── traffic.py
+│   ├── traffic_car.py
+│   ├── steering_controller.py
+│   └── ...
+│
+├── src/
+│   ├── main.py
+│   ├── camera.py
+│   ├── hand_tracker.py
+│   ├── steering_socket_server.py
+│   └── ...
+│
 ├── requirements.txt
 ├── README.md
-└── src/
-    ├── main.py
-    ├── camera.py
-    ├── hand_tracker.py
-    ├── config.py
-    └── utils.py
+└── run.py
 ```
 
-## Installation
+---
+
+# Installation
+
+## 1. Clone the repository
 
 ```bash
-python -m venv .venv
-# Windows (PowerShell)
-.venv\Scripts\Activate.ps1
-pip install --upgrade pip
+git clone https://github.com/Ali-cell-coder/Virtual-Steering-Wheel-Game.git
+cd Virtual-Steering-Wheel-Game
+```
+
+## 2. Create a virtual environment
+
+```bash
+py -3.12 -m venv .venv
+```
+
+## 3. Activate the virtual environment
+
+### Windows PowerShell
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+## 4. Install dependencies
+
+```bash
 pip install -r requirements.txt
 ```
 
-## Run
+---
 
-```bash
-python src/main.py
-```
+# Running the Project
 
-## Design Notes
+The project consists of **two separate applications**.
 
-- `camera.py`: webcam lifecycle and read abstraction
-- `hand_tracker.py`: MediaPipe detection + drawing logic
-- `utils.py`: FPS calculation and drawing helpers
-- `config.py`: immutable typed configuration objects
-- `main.py`: orchestration layer (application flow)
+Open **two PowerShell terminals**.
 
-Steering angle estimation and controller output are intentionally excluded at this stage to keep architecture-focused groundwork clean.
+---
 
-## How to Play
+## Terminal 1 — Hand Tracking
 
-1. Open a terminal and start the hand tracking:
+Open a terminal inside the project folder.
 
-```bash
+```powershell
+cd Virtual-Steering-Wheel-Game
+.\.venv\Scripts\Activate.ps1
 py src/main.py
 ```
 
-2. Open a second terminal and start the game:
+This launches:
 
-```bash
+- Webcam
+- Hand Tracking
+- Virtual Steering Wheel
+
+---
+
+## Terminal 2 — Driving Game
+
+Open another terminal inside the same project folder.
+
+```powershell
+cd Virtual-Steering-Wheel-Game
+.\.venv\Scripts\Activate.ps1
 py game/main.py
 ```
 
-3. Allow camera access if Windows asks for permission.
+This launches the driving game.
 
+---
+
+# Gameplay
+
+1. Start **Hand Tracking**.
+2. Start the **Driving Game**.
+3. Allow camera access if Windows asks.
 4. Place both hands in front of the webcam.
+5. Wait for the countdown.
+6. Turn the virtual steering wheel.
+7. Avoid traffic vehicles.
+8. Try to beat your High Score.
 
-5. After the countdown, the steering wheel becomes active and controls the car.
+---
+
+# Controls
+
+| Action | Description |
+|---------|-------------|
+| Steering Wheel | Control the vehicle |
+| ESC | Exit the game |
+| Restart Button | Restart after Game Over |
+
+---
+
+# Screenshots
+
+Add screenshots or GIFs here.
+
+Example:
+
+```
+assets/screenshots/gameplay.png
+```
+
+---
+
+# Future Improvements
+
+- Multiple road themes
+- More vehicle types
+- Difficulty levels
+- Lane changing AI
+- Better visual effects
+- Score leaderboard
+
+
+
