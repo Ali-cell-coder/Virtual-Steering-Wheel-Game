@@ -94,46 +94,36 @@ pip install -r requirements.txt
 ```
 
 ---
-
 # Running the Project
 
-The project consists of **two separate applications**.
+After installing the dependencies, you have two options.
 
-Open **two PowerShell terminals**.
+## Option 1 (Recommended)
+
+Simply double-click:
+
+- **start_camera.bat**
+- **start_game.bat**
+
+This will automatically activate the virtual environment and launch the applications.
 
 ---
 
-## Terminal 1 — Hand Tracking
+## Option 2 (Manual)
 
-Open a terminal inside the project folder.
+### Camera
 
 ```powershell
-cd Virtual-Steering-Wheel-Game
 .\.venv\Scripts\Activate.ps1
 py src/main.py
 ```
 
-This launches:
-
-- Webcam
-- Hand Tracking
-- Virtual Steering Wheel
-
----
-
-## Terminal 2 — Driving Game
-
-Open another terminal inside the same project folder.
+### Game
 
 ```powershell
-cd Virtual-Steering-Wheel-Game
 .\.venv\Scripts\Activate.ps1
 py game/main.py
 ```
-
-This launches the driving game.
-
----
 
 # Gameplay
 
