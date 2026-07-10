@@ -152,5 +152,19 @@ assets/screenshots/gameplay.png
 - Better visual effects
 - Score leaderboard
 
+## Quick Start
 
+### First time setup
+
+```bash
+git clone https://github.com/Ali-cell-coder/Virtual-Steering-Wheel-Game.git
+cd Virtual-Steering-Wheel-Game
+py -3.12 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+```
+
+### Run
+
+Double-click `start_project.bat`.
 
