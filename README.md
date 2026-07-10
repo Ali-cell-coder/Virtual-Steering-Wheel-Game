@@ -96,34 +96,17 @@ pip install -r requirements.txt
 ---
 # Running the Project
 
-After installing the dependencies, you have two options.
+After completing the installation:
 
-## Option 1 (Recommended)
+1. Double-click **start_project.bat**
 
-Simply double-click:
+The launcher will automatically:
 
-- **start_camera.bat**
-- **start_game.bat**
+- Activate the virtual environment
+- Start the hand tracking application
+- Start the driving game
 
-This will automatically activate the virtual environment and launch the applications.
-
----
-
-## Option 2 (Manual)
-
-### Camera
-
-```powershell
-.\.venv\Scripts\Activate.ps1
-py src/main.py
-```
-
-### Game
-
-```powershell
-.\.venv\Scripts\Activate.ps1
-py game/main.py
-```
+No additional commands are required.
 
 # Gameplay
 
